@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Photowaala Admin</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📸 Royal</h2>
+        <nav>
+            <ul>
+                <li onclick="switchTab('dashboard')" class="active">Dashboard</li>
+                <li onclick="switchTab('bookings')">Bookings</li>
+                <li onclick="switchTab('gallery')">Gallery</li>
+                <li onclick="switchTab('settings')">Settings</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <h1 id="pageTitle">Dashboard</h1>
+        </div>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="section active">
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Bookings</h3>
+                    <p id="totalBookings">0</p>
+                </div>
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>₹ <span id="revenue">0</span></p>
+                </div>
+                <div class="card">
+                    <h3>Pending</h3>
+                    <p id="pending">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bookings -->
+        <section id="bookings" class="section">
+            <h2>All Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Package</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingTable"></tbody>
+            </table>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="section">
+            <h2>Upload Images</h2>
+            <input type="file" id="imageInput">
+            <button onclick="uploadImage()">Upload</button>
+
+            <div id="galleryGrid" class="gallery"></div>
+        </section>
+
+        <!-- Settings -->
+        <section id="settings" class="section">
+            <h2>Settings</h2>
+            <p>Coming soon...</p>
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

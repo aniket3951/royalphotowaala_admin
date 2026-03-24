@@ -1,0 +1,47 @@
+services:
+  # Web Service
+  - type: web
+    name: royalphotowaala
+    env: node
+    repo: https://github.com/aniket3951/royalphotowaala.git
+    rootDir: backend
+    buildCommand: npm install && npx prisma@5.22.0 generate && npx prisma@5.22.0 db push
+    startCommand: npm run start:production
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        value: royalphotowaala-secret-key-2024-production
+      - key: DATABASE_URL
+        value: file:/opt/render/project/src/database.sqlite
+      - key: SESSION_SECRET
+        value: royalphotowaala-session-secret-2024
+      - key: MAX_FILE_SIZE
+        value: 104857600
+      - key: UPLOAD_PATH
+        value: ./uploads
+      - key: ALLOWED_ORIGINS
+        value: https://royalphotowaala.onrender.com,https://royalphotowaala-1.onrender.com
+      - key: LOG_LEVEL
+        value: info
+      - key: RATE_LIMIT_WINDOW
+        value: 15
+      - key: RATE_LIMIT_MAX
+        value: 100
+      # Optional: Cloudinary Configuration (Only add if you have Cloudinary account)
+      # - key: CLOUDINARY_CLOUD_NAME
+      #   value: your-cloud-name
+      # - key: CLOUDINARY_API_KEY
+      #   value: your-api-key
+      # - key: CLOUDINARY_API_SECRET
+      #   value: your-api-secret
+  # PostgreSQL Database (Optional - Upgrade later)
+  # - type: pserv
+  #   name: royalphotowaala-db
+  #   plan: free
+  #   envVars:
+  #     - key: POSTGRES_DB
+  #       value: royalphototowaala

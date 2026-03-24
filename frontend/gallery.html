@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - Royal Photowaala | Best Photography Captures</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse our stunning photography gallery featuring wedding, event, and portrait captures by Royal Photowaala." />
+  <meta name="keywords" content="photography gallery, wedding photos, event photography, candid shots, royal photowaala portfolio" />
+  <link rel="canonical" href="https://royalphotowaala.com/gallery.html" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+<!-- Header -->
+<header>
+  <nav>
+    <h1 class="logo">
+      <span id="logo-container"></span>
+      Royal Photowaala
+    </h1>
+
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span aria-hidden="true">☰</span>
+    </button>
+    
+    <ul id="primary-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Gallery Hero Section -->
+<section class="gallery-hero">
+  <div class="hero-content">
+    <h1>Our Best Captures</h1>
+    <p>Explore our portfolio of stunning wedding, event, and portrait photography</p>
+  </div>
+</section>
+
+<!-- Gallery Filter Section -->
+<section class="gallery-filters">
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    <button class="filter-btn" data-filter="wedding">Wedding</button>
+    <button class="filter-btn" data-filter="events">Events</button>
+    <button class="filter-btn" data-filter="portrait">Portrait</button>
+    <button class="filter-btn" data-filter="candid">Candid</button>
+  </div>
+</section>
+
+<!-- Main Gallery Grid -->
+<section class="main-gallery">
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Gallery items will be dynamically loaded here -->
+    <div class="loading-placeholder">
+      <div class="spinner"></div>
+      <p>Loading amazing captures...</p>
+    </div>
+  </div>
+  
+  <!-- Load More Button -->
+  <div class="load-more-container">
+    <button id="loadMoreBtn" class="btn-secondary" style="display: none;">Load More Images</button>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="lightbox-modal">
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <img id="lightboxImage" src="" alt="Gallery Image" />
+    <div class="lightbox-info">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDescription"></p>
+    </div>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+  </div>
+</div>
+
+<!-- Gallery Stats Section -->
+<section class="gallery-stats">
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="stat-number" id="totalPhotos">0</div>
+      <div class="stat-label">Total Photos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="happyClients">500+</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="eventsCovered">200+</div>
+      <div class="stat-label">Events Covered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" id="yearsExperience">8+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="gallery-cta">
+  <div class="cta-content">
+    <h2>Love What You See?</h2>
+    <p>Let us capture your special moments with the same passion and creativity</p>
+    <a href="booking.html" class="btn">Book Your Session</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Royal Photowaala</h3>
+      <p>Professional wedding and event photography services in Maharashtra, India.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="../main/templates/terms.html">Terms & Conditions</a></li>
+        <li><a href="../main/templates/privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Royal Photowaala. All rights reserved. | Designed by <strong><a href="https://www.instagram.com/mr_aniket49?igsh=MXkwczhuMDJwa2gzbg==" target="_blank" rel="noopener noreferrer">@aniket_kumbhar</a></strong></p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

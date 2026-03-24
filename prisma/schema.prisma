@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Gallery {
+  id        Int      @id @default(autoincrement())
+  filename  String
+  createdAt DateTime @default(now())
+}
+
+model Booking {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String?
+  phone     String
+  package   String?
+  date      String
+  details   String?
+  status    String   @default("Pending")
+  createdAt DateTime @default(now())
+}
+
+model HomeImage {
+  id        Int      @id @default(autoincrement())
+  filename  String
+  createdAt DateTime @default(now())
+}
+
+model Logo {
+  id        Int      @id @default(autoincrement())
+  filename  String
+  createdAt DateTime @default(now())
+}

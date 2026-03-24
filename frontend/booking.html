@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking - Royal Photowaala | Book Your Photography Session</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Book your wedding, event, or portrait photography session with Royal Photowaala. Easy online booking with instant WhatsApp confirmation." />
+  <meta name="keywords" content="photography booking, wedding photographer booking, event photography reservation, royal photowaala booking" />
+  <link rel="canonical" href="https://royalphotowaala.com/booking.html" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- Header -->
+<header>
+  <nav>
+    <h1 class="logo">
+      <span id="logo-container"></span>
+      Royal Photowaala
+    </h1>
+
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span aria-hidden="true">☰</span>
+    </button>
+    
+    <ul id="primary-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="booking.html" class="active">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Booking Hero Section -->
+<section class="booking-hero">
+  <div class="hero-content">
+    <h1>Book Your Session</h1>
+    <p>Secure your date and let us capture your beautiful moments</p>
+  </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="booking-section">
+  <div class="booking-container">
+    <div class="booking-header">
+      <h2>Check Availability & Book</h2>
+      <p>Fill in the details below and we'll get back to you instantly via WhatsApp</p>
+    </div>
+
+    <form class="booking-form" id="bookingForm" novalidate>
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h3>Personal Information</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required aria-required="true" />
+            <span class="form-error"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit phone number" autocomplete="tel" pattern="[0-9]{10}" required aria-required="true" />
+            <span class="form-error"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+            <span class="form-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="eventType" class="form-label">Event Type *</label>
+            <select id="eventType" name="eventType" required aria-required="true">
+              <option value="" disabled selected>Select event type</option>
+              <option value="wedding">💒 Wedding</option>
+              <option value="engagement">💍 Engagement</option>
+              <option value="birthday">🎂 Birthday Party</option>
+              <option value="corporate">💼 Corporate Event</option>
+              <option value="portrait">📸 Portrait Session</option>
+              <option value="other">🎉 Other Event</option>
+            </select>
+            <span class="form-error"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package Selection -->
+      <div class="form-section">
+        <h3>Select Package *</h3>
+        <div class="package-options">
+          <div class="package-option">
+            <input type="radio" id="traditional" name="package" value="Traditional Photography" required />
+            <label for="traditional" class="package-label">
+              <div class="package-info">
+                <h4>Traditional Photography</h4>
+                <p>Professional shots with full coverage</p>
+                <span class="package-price">₹15,000</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="package-option">
+            <input type="radio" id="candid" name="package" value="Candid Photography" required />
+            <label for="candid" class="package-label">
+              <div class="package-info">
+                <h4>Candid Photography</h4>
+                <p>Natural moments, creative shots</p>
+                <span class="package-price">₹20,000</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="package-option">
+            <input type="radio" id="videography" name="package" value="Traditional Videography" required />
+            <label for="videography" class="package-label">
+              <div class="package-info">
+                <h4>Traditional Videography</h4>
+                <p>4K video with professional editing</p>
+                <span class="package-price">₹25,000</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="package-option">
+            <input type="radio" id="cinematography" name="package" value="Cinematography" required />
+            <label for="cinematography" class="package-label">
+              <div class="package-info">
+                <h4>Cinematography</h4>
+                <p>Cinematic video with teaser + main film</p>
+                <span class="package-price">₹35,000</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="package-option">
+            <input type="radio" id="custom" name="package" value="Custom Package" required />
+            <label for="custom" class="package-label">
+              <div class="package-info">
+                <h4>Custom Package</h4>
+                <p>Tailored to your specific needs</p>
+                <span class="package-price">Contact for quote</span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Details -->
+      <div class="form-section">
+        <h3>Event Details</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date" class="form-label">Event Date *</label>
+            <input type="date" id="date" name="date" required aria-required="true" />
+            <span class="form-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="venue" class="form-label">Event Venue</label>
+            <input type="text" id="venue" name="venue" placeholder="Event venue/location" />
+            <span class="form-error"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="details" class="form-label">Event Details</label>
+          <textarea id="details" name="details" placeholder="Tell us more about your event (timing, special requirements, etc.)" rows="4"></textarea>
+          <span class="form-error"></span>
+        </div>
+      </div>
+
+      <!-- Additional Services -->
+      <div class="form-section">
+        <h3>Additional Services (Optional)</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="additionalServices" value="Drone Photography" />
+            <span class="checkmark"></span>
+            Drone Photography (+₹5,000)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="additionalServices" value="Photo Album" />
+            <span class="checkmark"></span>
+            Photo Album (+₹8,000)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="additionalServices" value="Live Streaming" />
+            <span class="checkmark"></span>
+            Live Streaming (+₹3,000)
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="additionalServices" value="Same Day Preview" />
+            <span class="checkmark"></span>
+            Same Day Preview (+₹2,000)
+          </label>
+        </div>
+      </div>
+
+      <!-- Terms and Submit -->
+      <div class="form-section">
+        <div class="terms-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" name="terms" required />
+            <span class="checkmark"></span>
+            I agree to the <a href="../main/templates/terms.html" target="_blank">Terms & Conditions</a> and <a href="../main/templates/privacy.html" target="_blank">Privacy Policy</a> *
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span class="btn-text">🚀 Book on WhatsApp</span>
+          <span class="btn-spinner" style="display: none;">
+            <span class="spinner"></span> Processing...
+          </span>
+        </button>
+      </div>
+    </form>
+
+    <!-- Booking Information -->
+    <div class="booking-info">
+      <h3>What Happens Next?</h3>
+      <div class="info-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Submit Booking</h4>
+            <p>Fill the form and submit your booking request</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>WhatsApp Confirmation</h4>
+            <p>Receive instant confirmation via WhatsApp with details</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Consultation Call</h4>
+            <p>We'll call you to discuss requirements and finalize details</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Advance Payment</h4>
+            <p>Pay 30% advance to confirm your booking</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="booking-faq">
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-items">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>How much advance payment is required?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We require 30% advance payment to confirm your booking. The remaining 70% is due on the event day.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Can I customize the package?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We offer customizable packages based on your specific needs. Contact us for a personalized quote.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>How long does it take to deliver photos/videos?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Photos are delivered within 15 days, and videos within 30 days. We also provide same-day previews for selected packages.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Do you travel outside Maharashtra?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we travel across India and internationally. Travel and accommodation charges apply for outstation events.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Royal Photowaala</h3>
+      <p>Professional wedding and event photography services in Maharashtra, India.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="../main/templates/terms.html">Terms & Conditions</a></li>
+        <li><a href="../main/templates/privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Royal Photowaala. All rights reserved. | Designed by <strong><a href="https://www.instagram.com/mr_aniket49?igsh=MXkwczhuMDJwa2gzbg==" target="_blank" rel="noopener noreferrer">@aniket_kumbhar</a></strong></p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/booking.js"></script>
+</body>
+</html>

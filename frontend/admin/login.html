@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - Royal Photowaala</title>
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body class="login-body">
+  <!-- Login Container -->
+  <div class="login-container">
+    <!-- Login Header -->
+    <div class="login-header">
+      <div class="logo-section">
+        <h1>📸 Royal Photowaala</h1>
+        <p>Admin Dashboard</p>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <main class="login-main">
+      <div class="login-card">
+        <div class="login-card-header">
+          <h2>Welcome Back</h2>
+          <p>Sign in to manage your photography business</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-group">
+              <span class="input-icon">👤</span>
+              <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                placeholder="Enter your username"
+                required 
+                autocomplete="username"
+              />
+            </div>
+            <span class="form-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+              <span class="input-icon">🔒</span>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Enter your password"
+                required 
+                autocomplete="current-password"
+              />
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                <span class="toggle-icon">👁️</span>
+              </button>
+            </div>
+            <span class="form-error"></span>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember" name="remember">
+              <span class="checkmark"></span>
+              Remember me for 30 days
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-spinner" style="display: none;">
+              <span class="spinner"></span> Signing in...
+            </span>
+          </button>
+        </form>
+
+        <!-- Security Notice -->
+        <div class="security-notice">
+          <div class="notice-icon">🔐</div>
+          <div class="notice-content">
+            <h4>Security Notice</h4>
+            <p>This is a restricted area. Unauthorized access is prohibited and will be monitored.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Login Footer -->
+    <footer class="login-footer">
+      <div class="footer-links">
+        <a href="/" class="back-to-site">
+          <span class="link-icon">🏠</span>
+          Back to Website
+        </a>
+        <div class="footer-info">
+          <p>© 2025 Royal Photowaala Admin Panel</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Keep this directory structure but ignore uploaded files
+# This ensures the directories are tracked by git but the contents are not
+
+# Gallery uploads
+gallery/
+!.gitkeep
+
+# Home page images
+home/
+!.gitkeep
+
+# Logo uploads
+logos/
+!.gitkeep
+
+# Temporary uploads
+temp/
+!.gitkeep
